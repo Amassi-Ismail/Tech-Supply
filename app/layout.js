@@ -1,4 +1,5 @@
 // app/layout.js
+import Footer from "./components/Footer";
 import Navbar from "./components/NavBar";
 import "./globals.css";
 
@@ -13,9 +14,7 @@ export default function RootLayout({ children }) {
       <body>
       <Navbar />
         <main>{children}</main>
-        <footer className="bg-gray-800 text-white p-4 text-center">
-          &copy; 2025 Tech Store
-        </footer>
+        <Footer/>
       </body>
     </html>
   );
