@@ -17,7 +17,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-white shadow-lg">
+    <nav className="bg-white shadow-lg relative z-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Left side - Logo & Name */}
@@ -45,7 +45,7 @@ export default function Navbar() {
           <div className="flex items-center">
             {user ? (
               <Menu as="div" className="relative">
-                <Menu.Button className="flex items-center space-x-1">
+                <Menu.Button className="flex items-center space-x-1 focus:outline-none">
                   <img 
                     src={user.photoURL || '/default-avatar.png'} 
                     alt="Profile" 
@@ -65,7 +65,7 @@ export default function Navbar() {
                   leaveFrom="transform opacity-100 scale-100"
                   leaveTo="transform opacity-0 scale-95"
                 >
-                  <Menu.Items className="absolute right-0 mt-2 w-48 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                  <Menu.Items className="absolute right-0 mt-2 w-48 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
                     <div className="py-1">
                       <Menu.Item>
                         {({ active }) => (
