@@ -17,7 +17,7 @@ export default function AuthPage() {
   const router = useRouter();
 
   useEffect(() => {
-    if (user) router.push('/home');
+    if (user) router.push('/');
   }, [user, router]);
 
   const handleSubmit = async (e) => {
@@ -31,7 +31,7 @@ export default function AuthPage() {
       } else {
         await createUserWithEmailAndPassword(auth, email, password);
       }
-      router.push('/dashboard');
+      router.push('/');
     } catch (err) {
       setError(err.message);
       setLoading(false);
